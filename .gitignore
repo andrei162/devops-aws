@@ -1,0 +1,25 @@
+# Terraform local state & variables containing secrets
+terraform/.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+.terraform.lock.hcl
+!terraform.tfvars.example
+
+# SSH Keys and local secrets
+*.pem
+*.key
+*.id_rsa
+aws_ec2_key*
+.vault_pass
+
+# Ansible cache and temporary files
+*.retry
+.ansible/
+
+# Python & System Caches
+__pycache__/
+*.pyc
+.DS_Store
+*.swp
