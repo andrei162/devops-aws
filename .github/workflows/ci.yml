@@ -25,7 +25,7 @@ jobs:
         run: pip install yamllint
 
       - name: Lint YAML Files
-        run: yamllint k8s/
+        run: yamllint docker-app/k8s/
 
       # --- 2. Terraform Validation ---
       - name: Setup Terraform
@@ -52,4 +52,4 @@ jobs:
           sudo mv kubeconform /usr/local/bin/
 
       - name: Validate Kubernetes Manifests
-        run: kubeconform -strict k8s/
+        run: kubeconform -strict docker-app/k8s/
