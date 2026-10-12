@@ -4,8 +4,10 @@ from prometheus_flask_exporter import PrometheusMetrics
 
 app = Flask(__name__)
 
+# Initialize Prometheus metrics exporter
 metrics = PrometheusMetrics(app)
 
+# Static app info metadata
 metrics.info('app_info', 'Application info', version='1.0.0')
 
 @app.route('/')
